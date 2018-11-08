@@ -1,6 +1,13 @@
 # migrate-mongoose
 A node based migration framework for mongoose
 
+Forked from [balmasi/migrate-mongoose](https://github.com/balmasi/migrate-mongoose)
+
+Just removed bubel...
+
+### Programmatic usage
+[README.md](https://github.com/nbvehbq/migrate-mongoose/tree/master/examples/programmatic-usage)
+
 #### Motivation
 migrate-mongoose is a migration framework for projects which are already using mongoose.
  
@@ -204,8 +211,3 @@ Currently, the **-d**/**dbConnectionUri**  must include the database to use for 
 example: `-d mongodb://localhost:27017/development` . If you don't want to pass it in every time feel free to use the
 `migrate.json` config file or an environment variable
 
-
-### How to contribute
-1. Start an issue. We will discuss the best approach
-2. Make a pull request. I'll review it and comment until we are both confident about it
-3. Profit

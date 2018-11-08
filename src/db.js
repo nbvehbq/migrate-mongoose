@@ -1,9 +1,11 @@
-import mongoose, { Schema }  from 'mongoose';
-import Promise from 'bluebird';
+const mongoose = require('mongoose');
+const Promise = require('bluebird');
+
 // Factory function for a mongoose model
 mongoose.Promise = Promise;
+const Schema = mongoose.Schema;
 
-export default function ( collection = 'migrations', dbConnection ) {
+module.exports = function ( collection = 'migrations', dbConnection ) {
 
   const MigrationSchema = new Schema({
     name: String,

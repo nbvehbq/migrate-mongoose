@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
-import path from 'path';
-import yargs from 'yargs';
-import 'colors';
+const path = require('path');
+const yargs = require('yargs');
+require('colors');
 
-import Migrator from './lib';
+const Migrator = require('./lib');
 
-let  { argv: args } = yargs
+let { argv: args } = yargs
   .usage("Usage: migrate -d <mongo-uri> [[create|up|down <migration-name>]|list] [optional options]")
   .demand(1)
   .default('config', 'migrate')

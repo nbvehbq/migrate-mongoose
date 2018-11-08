@@ -1,13 +1,13 @@
-import path from 'path';
-import fs from 'fs';
-import mkdirp from 'mkdirp';
-import Promise from 'bluebird';
-import 'colors';
-import mongoose from 'mongoose';
-import _ from 'lodash';
-import ask from 'inquirer';
+const path = require('path');
+const fs = require('fs');
+const mkdirp = require('mkdirp');
+const Promise = require('bluebird');
+require('colors');
+const mongoose = require('mongoose');
+const _ = require('lodash');
+const ask = require('inquirer');
 
-import MigrationModelFactory from './db';
+const MigrationModelFactory = require('./db');
 let MigrationModel;
 
 Promise.config({
@@ -50,7 +50,7 @@ exports.down = function down(done) {
 `;
 
 
-export default class Migrator {
+module.exports = class Migrator {
   constructor({
     templatePath,
     migrationsPath = './migrations',
@@ -374,5 +374,5 @@ function fileRequired(error) {
 }
 
 
-module.exports = Migrator;
+// module.exports = Migrator;
 
